@@ -1,5 +1,6 @@
 # site-setting
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![Build Status](https://travis-ci.org/proshore/site-setting.svg?branch=add-license-1)](https://travis-ci.org/proshore/site-setting)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/proshore/site-setting/blob/master/LICENSE)
 
 A Laravel based Site Setting with Bootstrap
 
