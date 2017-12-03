@@ -1,0 +1,22 @@
+{
+    "name": "proshore/site-setting",
+    "description": "Managing site settings of the application from backend portal",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Babish Shrestha",
+            "email": "babishshrestha@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "laravelcollective/html":"^5.4.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Proshore\\SiteSetting\\SiteSettingServiceProvider"
+            ]
+        }
+    }
+}
