@@ -30,11 +30,11 @@ class SiteSettingServiceProvider extends ServiceProvider
 
         //Publishing
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views/vendor/sitesetting'),
-        ]);
+            __DIR__.'/resources/views' => resource_path('views/vendor/site-setting'),
+        ], 'views');
         $this->publishes([
             __DIR__.'/config/sitesetting.php' => config_path('sitesetting.php'),
-        ]);
+        ], 'config');
     }
 
     /**
