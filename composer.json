@@ -1,6 +1,7 @@
 {
     "name": "proshore/site-setting",
     "description": "Managing site settings of the application from backend portal",
+    "keywords": ["laravel", "sitesetting", "setting", "bootstrap"],
     "license": "MIT",
     "authors": [
         {
@@ -8,7 +9,13 @@
             "email": "babishshrestha@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Proshore\\SiteSetting\\": "src/"
+        }
+    },
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "laravelcollective/html":"^5.4.0"
     },
