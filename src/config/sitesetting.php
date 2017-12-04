@@ -1,6 +1,9 @@
 <?php
 return [
-
+    /**
+     * Blade path for main layout Eg: layouts.main
+     */
+    'layout-extend-path' => 'layouts.layout',
     /**
      * Add fields that is required in site setting
      *

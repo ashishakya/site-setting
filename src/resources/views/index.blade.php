@@ -1,4 +1,4 @@
-@extends('layout')
+@extends(config('sitesetting.layout-extend-path'))
 
 @section('content')
     @if(isset($siteSetting->id))

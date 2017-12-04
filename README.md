@@ -25,21 +25,30 @@ Proshore\SiteSetting\SiteSettingServiceProvider::class,
 
 2. Publish the config file. 
 
+3. Run migration
+````Shell
+php artisan migrate
+````
+
 ## Publishing
 #### Publishing the config file
-
 ````shell
 php artisan vendor:publish --tag=config
 ````
 
 #### Publishing views
+If you want to override your view then please run the following command and make necessary changes
 ````shell
 php artisan vendor:publish --tag=views
 ````
 
 ## Documentation
-To add site setting options, please change the config file located at 'config/sitesetting.php'. Initially, there are some template to get you started with.
+To change the layout path. Select your backend default layout
+````javascript
+'layout-extend-path' => 'layouts.layout'
+````
 
+To add site setting options, please change the config file located at 'config/sitesetting.php'. Initially, there are some template to get you started with.
 ```javascript
 'fields' => [
         [    
@@ -58,8 +67,7 @@ To add site setting options, please change the config file located at 'config/si
             'type'    => 'select',
             'options' => [
                 '0' => 'Active',
-                '1' => 'Inactive'
-            ]
+                '1' => 'Inactive'            ]
         ],
         [
             'name'  => 'checkbox',
