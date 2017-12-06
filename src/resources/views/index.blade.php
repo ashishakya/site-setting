@@ -4,7 +4,7 @@
     @if(isset($siteSetting->id))
         {!! Form::model($siteSetting->meta_data, ['route' => ['sitesetting.update', $siteSetting->id ], 'method' => 'PUT', 'class' => 'site-setting']) !!}
     @else
-        {!! Form::open(['route' => 'sitesetting.store', 'class' => 'site-setting']) !!}
+        {!! Form::open(['route' => 'sitesetting.store', 'class' => 'site-setting', 'id' => 'site-setting']) !!}
     @endif
 
     @foreach($fields as $field)
@@ -13,7 +13,7 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">{{ ucwords(__($field['label'])) }}</label>
             <div class="col-sm-10">
-                {!! Form::textarea($field['name'], null, ['class' => 'form-control']) !!}
+                {!! Form::textarea($field['name'], null, ['class' => 'form-control', 'id' => $field['name']]) !!}
             </div>
         </div>
         @break
@@ -23,7 +23,7 @@
             <div class="col-sm-10">
                 <div class="form-check">
                     <label class="form-check-label">
-                        {!! Form::checkbox($field['name'], null, ['class' => 'form-check-input']) !!}
+                        {!! Form::checkbox($field['name'], null, ['class' => 'form-check-input', 'id' => $field['name']]) !!}
                         {{ $field['label'] }}
                     </label>
                 </div>
@@ -37,7 +37,7 @@
                 @foreach($field['options'] as $radioValue => $radioLabel)
                     <div class="form-check">
                         <label class="form-check-label">
-                            {!! Form::radio($field['name'], $radioValue, ['class' => 'form-check-input']) !!}
+                            {!! Form::radio($field['name'], $radioValue, ['class' => 'form-check-input', 'id' => $field['name']]) !!}
                             {{ $radioLabel }}
                         </label>
                     </div>
@@ -49,7 +49,7 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">{{ ucwords(__($field['label'])) }}</label>
             <div class="col-sm-10">
-                {!! Form::select($field['name'], $field['options'], null, ['class' => 'form-control']) !!}
+                {!! Form::select($field['name'], $field['options'], null, ['class' => 'form-control', 'id' => $field['name']]) !!}
             </div>
         </div>
         @break
@@ -57,7 +57,7 @@
         <div class="form-group row">
             <label class="col-sm-2 col-form-label">{{ ucwords(__($field['label'])) }}</label>
             <div class="col-sm-10">
-                {!! Form::text($field['name'], null, ['class' => 'form-control']) !!}
+                {!! Form::text($field['name'], null, ['class' => 'form-control', 'id' => $field['name']]) !!}
             </div>
         </div>
 
@@ -66,7 +66,7 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label">&nbsp;</label>
         <div class="col-sm-10">
-            {!! Form::button(__('Update'),['type'=>'submit','class'=>'btn btn-primary']) !!}
+            {!! Form::button(__('Update'),['type'=>'submit','class'=>'btn btn-primary', 'id' => 'update']) !!}
         </div>
     </div>
 
