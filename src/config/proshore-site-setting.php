@@ -5,6 +5,18 @@ return [
      */
     'layout-extend-path' => 'layouts.layout',
     /**
+     * prefix for the route. leave empty if not required
+     */
+    'prefix' => 'admin',
+    /**
+     * Add additional middleware if required
+     */
+    'middleware' => 'web',
+    /**
+     * Form class for create and edit menu
+     */
+    'form-class' => 'site-setting',
+    /**
      * Add fields that is required in site setting
      *
      * Available option name, label, type
