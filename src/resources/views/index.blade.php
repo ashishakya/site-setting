@@ -1,10 +1,10 @@
-@extends(config('sitesetting.layout-extend-path'))
+@extends(config('proshore-site-setting.layout-extend-path'))
 
 @section('content')
     @if(isset($siteSetting->id))
-        {!! Form::model($siteSetting->meta_data, ['route' => ['sitesetting.update', $siteSetting->id ], 'method' => 'PUT', 'class' => 'site-setting']) !!}
+        {!! Form::model($siteSetting->meta_data, ['route' => ['sitesetting.update', $siteSetting->id ], 'method' => 'PUT', 'class' => config('proshore-site-setting.form-class'), 'id' => 'site-setting']) !!}
     @else
-        {!! Form::open(['route' => 'sitesetting.store', 'class' => 'site-setting', 'id' => 'site-setting']) !!}
+        {!! Form::open(['route' => 'sitesetting.store', 'class' => config('proshore-site-setting.form-class'), 'id' => 'site-setting']) !!}
     @endif
 
     @foreach($fields as $field)

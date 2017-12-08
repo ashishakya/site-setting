@@ -8,6 +8,15 @@ use Proshore\SiteSetting\Models\SiteSetting;
 
 class SiteSettingController extends Controller
 {
+    /**
+     * @var SiteSetting
+     */
+    private $siteSetting;
+
+    public function __construct(SiteSetting $siteSetting)
+    {
+        $this->siteSetting = $siteSetting;
+    }
 
     /**
      * Edit Site Setting
@@ -16,12 +25,12 @@ class SiteSettingController extends Controller
      */
     public function edit()
     {
-        $siteSetting = SiteSetting::get()->first();
+        $siteSetting = $this->siteSetting->get()->first();
         if (!$siteSetting) {
-            $siteSetting = new SiteSetting();
+            $siteSetting = $this->siteSetting;
         }
 
-        $fields = config('sitesetting.fields');
+        $fields = config('proshore-site-setting.fields');
 
         return view('SiteSetting::index', compact(['siteSetting', 'fields']));
     }
@@ -37,9 +46,9 @@ class SiteSettingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $siteSetting = SiteSetting::find($id);
+        $siteSetting = $this->siteSetting->find($id);
 
-        if (SiteSetting::saveMetaData($siteSetting, $request)) {
+        if ($this->siteSetting->saveMetaData($siteSetting, $request)) {
             return redirect()
                 ->route('sitesetting.edit')
                 ->with('success', __('Site setting updated successfully'));
@@ -60,9 +69,9 @@ class SiteSettingController extends Controller
      */
     public function store(Request $request)
     {
-        $siteSetting = new SiteSetting();
+        $siteSetting = $this->siteSetting;
 
-        if (SiteSetting::saveMetaData($siteSetting, $request)) {
+        if ($this->siteSetting->saveMetaData($siteSetting, $request)) {
             return redirect()
                 ->route('sitesetting.edit')
                 ->with('success', __('Site setting updated successfully'));
