@@ -2,9 +2,9 @@
 
 namespace Proshore\SiteSetting\Http\Controllers;
 
-use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Proshore\SiteSetting\Models\SiteSetting;
+use Illuminate\Routing\Controller as BaseController;
 
 class SiteSettingController extends BaseController
 {
@@ -19,14 +19,14 @@ class SiteSettingController extends BaseController
     }
 
     /**
-     * Edit Site Setting
+     * Edit Site Setting.
      *
-     * @return boolean
+     * @return bool
      */
     public function edit()
     {
         $siteSetting = $this->siteSetting->get()->first();
-        if (!$siteSetting) {
+        if (! $siteSetting) {
             $siteSetting = $this->siteSetting;
         }
 
@@ -35,9 +35,8 @@ class SiteSettingController extends BaseController
         return view('SiteSetting::index', compact(['siteSetting', 'fields']));
     }
 
-
     /**
-     * Updating the site settings with json encoding
+     * Updating the site settings with json encoding.
      *
      * @param Request $request Illuminate Request parameter
      * @param int     $id      site setting id to be updated
@@ -60,7 +59,7 @@ class SiteSettingController extends BaseController
     }
 
     /**
-     * Save site setting meta data for the first time
+     * Save site setting meta data for the first time.
      *
      * @param Request $request Illuminate Request parameter
      *
@@ -80,5 +79,4 @@ class SiteSettingController extends BaseController
                 ->with('error', __('Something went wrong. Site setting could not be uploaded'));
         }
     }
-
 }
