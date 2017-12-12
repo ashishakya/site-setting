@@ -25,7 +25,7 @@ class SiteSettingServiceProvider extends ServiceProvider
 
         //Load Package routes, views, migrations
         $this->loadRoutesFrom(__DIR__.'/routes/routes.php');
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'SiteSetting');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'site-setting');
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
         //Publishing
