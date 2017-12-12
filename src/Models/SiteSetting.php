@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class SiteSetting extends Model
 {
     protected $fillable = [
-        'meta_data'
+        'meta_data',
     ];
 
     protected $casts = [
@@ -20,7 +20,7 @@ class SiteSetting extends Model
     public $timestamps = false;
 
     /**
-     * Save Meta Data
+     * Save Meta Data.
      *
      * @param SiteSetting $siteSetting SiteSetting Model object
      * @param Request $request  Request parameter
@@ -42,6 +42,4 @@ class SiteSetting extends Model
             return false;
         }
     }
-
-
 }

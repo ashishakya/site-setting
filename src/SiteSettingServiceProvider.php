@@ -2,8 +2,8 @@
 
 namespace Proshore\SiteSetting;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
+use Illuminate\Support\ServiceProvider;
 use Collective\Html\HtmlServiceProvider;
 
 class SiteSettingServiceProvider extends ServiceProvider
@@ -19,12 +19,12 @@ class SiteSettingServiceProvider extends ServiceProvider
         $this->app->register(HtmlServiceProvider::class);
         $loader = AliasLoader::getInstance(
             [
-                'Form'=>'\Collective\Html\FormFacade'
+                'Form'=>'\Collective\Html\FormFacade',
             ]
         );
 
         //Load Package routes, views, migrations
-        $this->loadRoutesFrom(__DIR__ . '/routes/routes.php');
+        $this->loadRoutesFrom(__DIR__.'/routes/routes.php');
         $this->loadViewsFrom(__DIR__.'/resources/views', 'SiteSetting');
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
 
