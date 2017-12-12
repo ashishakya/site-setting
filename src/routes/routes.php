@@ -1,4 +1,5 @@
 <?php
+
 $groupParameters['namespace'] = 'Proshore\SiteSetting\Http\Controllers';
 if (config('proshore-menu-management.prefix')) {
     $groupParameters['prefix'] = config('proshore-site-setting.prefix');
@@ -14,4 +15,3 @@ Route::group($groupParameters, function () {
     Route::post('sitesetting', 'SiteSettingController@store')
          ->name('sitesetting.store');
 });
-
