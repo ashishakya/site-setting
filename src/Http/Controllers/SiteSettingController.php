@@ -2,11 +2,11 @@
 
 namespace Proshore\SiteSetting\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
 use Proshore\SiteSetting\Models\SiteSetting;
 
-class SiteSettingController extends Controller
+class SiteSettingController extends BaseController
 {
     /**
      * @var SiteSetting
