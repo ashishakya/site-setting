@@ -47,7 +47,7 @@ class SiteSettingController extends BaseController
     {
         $siteSetting = $this->siteSetting->find($id);
 
-        if ($this->siteSetting->saveMetaData($siteSetting, $request)) {
+        if (SiteSetting::saveMetaData($siteSetting, $request)) {
             return redirect()
                 ->route('sitesetting.edit')
                 ->with('success', __('Site setting updated successfully'));
@@ -69,7 +69,7 @@ class SiteSettingController extends BaseController
     {
         $siteSetting = $this->siteSetting;
 
-        if ($this->siteSetting->saveMetaData($siteSetting, $request)) {
+        if (SiteSetting::saveMetaData($siteSetting, $request)) {
             return redirect()
                 ->route('sitesetting.edit')
                 ->with('success', __('Site setting updated successfully'));
