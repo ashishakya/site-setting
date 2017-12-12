@@ -1,5 +1,4 @@
 # site-setting
-[![Build Status](https://travis-ci.org/proshore/site-setting.svg?branch=add-license-1)](https://travis-ci.org/proshore/site-setting)
 [![license](https://img.shields.io/github/license/proshore/site-setting.svg)](https://github.com/proshore/site-setting/blob/master/LICENSE)
 [![Packagist](https://img.shields.io/packagist/v/proshore/site-setting.svg)](https://packagist.org/packages/proshore/site-setting)
 
@@ -48,7 +47,7 @@ To change the layout path. Select your backend default layout
 'layout-extend-path' => 'layouts.layout'
 ````
 
-To add site setting options, please change the config file located at 'config/sitesetting.php'. Initially, there are some template to get you started with.
+To add site setting options, please change the config file located at 'config/proshore-site-setting.php'. Initially, there are some template to get you started with.
 ```javascript
 'fields' => [
         [    
