@@ -59,7 +59,6 @@ class SiteSettingController extends BaseController
         }
     }
 
-
     /**
      * Save site setting meta data for the first time
      *
