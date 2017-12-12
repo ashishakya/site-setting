@@ -13,7 +13,7 @@ return [
      * Add additional middleware if required
      */
     'middleware' => ['web', 'auth'],
-    /**
+    /*
      * Form class for create and edit menu
      */
     'form-class' => 'site-setting',
