@@ -33,7 +33,7 @@ class SiteSettingServiceProvider extends ServiceProvider
             __DIR__.'/resources/views' => resource_path('views/vendor/site-setting'),
         ], 'views');
         $this->publishes([
-            __DIR__.'/config/proshore-site-setting.php' => config_path('proshore-site-setting.php'),
+            __DIR__ . '/config/proshore.site-setting.php' => config_path('proshore.site-setting.php'),
         ], 'config');
     }
 

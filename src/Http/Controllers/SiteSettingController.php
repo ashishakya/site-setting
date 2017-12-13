@@ -30,7 +30,7 @@ class SiteSettingController extends BaseController
             $siteSetting = $this->siteSetting;
         }
 
-        $fields = config('proshore-site-setting.fields');
+        $fields = config('proshore.site-setting.fields');
 
         return view('site-setting::index', compact(['siteSetting', 'fields']));
     }
