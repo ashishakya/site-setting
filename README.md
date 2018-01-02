@@ -1,6 +1,8 @@
 # site-setting
-[![license](https://img.shields.io/github/license/proshore/site-setting.svg)](https://github.com/proshore/site-setting/blob/master/LICENSE)
-[![Packagist](https://img.shields.io/packagist/v/proshore/site-setting.svg)](https://packagist.org/packages/proshore/site-setting)
+[![Latest Stable Version](https://poser.pugx.org/proshore/site-setting/v/stable)](https://packagist.org/packages/proshore/site-setting)
+[![Total Downloads](https://poser.pugx.org/proshore/site-setting/downloads)](https://packagist.org/packages/proshore/site-setting)
+[![License](https://poser.pugx.org/proshore/site-setting/license)](https://packagist.org/packages/proshore/site-setting)
+[![Latest Unstable Version](https://poser.pugx.org/proshore/site-setting/v/unstable)](https://packagist.org/packages/proshore/site-setting)
 
 A Laravel based Site Setting with Bootstrap
 
@@ -10,7 +12,7 @@ This package will create a site setting module in your backend. The site setting
 1. Require this package with composer.
 
 ```shell
-composer require proshore/site-setting:dev-master
+composer require proshore/site-setting
 ```
 
 Laravel 5.5 uses Package Auto-Discovery, so you don't have to manually add the package to the ServiceProvider.
